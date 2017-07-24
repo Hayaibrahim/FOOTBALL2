@@ -10,44 +10,35 @@ import android.widget.TextView;
 
 import static com.example.android.football.R.menu.*;
 
+
 public class MainActivity extends AppCompatActivity {
-    int goal = 0;
-    int off = 0 ;
-    int mis = 0 ;
-    int plus = 0;
-    int min = 0;
-    int bre = 0;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //  getMenuInflater().inflate(R.menu.menu_main, menu);
-        //      return true;
-    }
+    private int goal = 0;
+    private int off = 0;
+    private int mis = 0;
+    private int plus = 0;
+    private int min = 0;
+    private int bre = 0;
+    private int fouls = 0;
+    private int foulsright = 0;
 
     public void RESTART(View v) {
-
-          plus = 0;
-          min = 0;
-        off =0 ;
-        mis= 0 ;
-        bre= 0 ;
-        goal= 0 ;
-
+        plus = 0;
+        min = 0;
+        off = 0;
+        mis = 0;
+        bre = 0;
+        goal = 0;
+        fouls = 0;
+        foulsright = 0;
         displayGoal(plus);
         displayGoalright(min);
         displayMistakescommitted(bre);
         displayoffsaid(off);
         displayGoal(goal);
         displayMistakescommittedright(mis);
-
+        displayfolus(fouls);
+        displayfolusright(foulsright);
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -62,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //increase by one point
     public void displayGoal(View v) {
         goal = goal + 1;
         displayGoal(goal);
@@ -72,8 +64,18 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    //
+    //increase by one point
+    public void displayfou(View v) {
+        fouls = fouls + 1;
+        displayGoal(fouls);
+    }
 
+    public void displayfolus(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.fouls);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    ////increase by two point
     public void displayoffsaid(View v) {
         off = off + 2;
         displayoffsaid(off);
@@ -84,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-
+    //increase by one point
     public void displayMistakescommittedd(View v) {
-        mis= mis + 1;
+        mis = mis + 1;
         displayMistakescommitted(mis);
     }
 
@@ -96,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //all booton left
-    ////////////////////////////////////////\
+    //increase by one point
     public void displayGoalright(View v) {
         plus = plus + 1;
         displayGoalright(plus);
@@ -105,8 +107,21 @@ public class MainActivity extends AppCompatActivity {
     public void displayGoalright(int score) {
         TextView scoreView = (TextView) findViewById(R.id.Goalright);
         scoreView.setText(String.valueOf(score));
+
     }
 
+    //increase by one point
+    public void displayfouright(View v) {
+        foulsright = foulsright + 1;
+        displayGoal(foulsright);
+    }
+
+    public void displayfolusright(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.foulsright);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    //increase by two point
     public void offsaidright(View v) {
         min = min + 2;
         displayoffsaidright(min);
@@ -117,9 +132,9 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-
+    //increase by four point
     public void displayMistakescommittedright(View v) {
-       bre = bre + 4;
+        bre = bre + 4;
         displayMistakescommittedright(min);
     }
 
@@ -127,7 +142,4 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.Mistakescommittedright);
         scoreView.setText(String.valueOf(score));
     }
-
-
 }
-

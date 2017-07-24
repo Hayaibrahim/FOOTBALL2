@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,19 +15,15 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="7dp"
                 android:text="Barcelona"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-
-                />
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Goal"
@@ -36,26 +31,47 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="7dp"
-                android:text="0" />
+                android:text="0"
+                android:textColor="#494387"
+                android:textSize="19sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-              android:onClick="displayGoal"
+                android:onClick="display"
                 android:text="Goal"
                 android:textColor="#494387"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fouls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="7dp"
+                android:text="0"
+                android:textColor="#494387"
+                android:textSize="19sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="displayGoal"
+                android:text="fouls "
+                android:textColor="#494387"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/offsaid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="7dp"
                 android:text="0"
                 android:textColor="#494387"
-                android:textSize="15sp" />
+                android:textSize="19sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -64,15 +80,17 @@
                 android:onClick="displayoffsaid"
                 android:text="offside"
                 android:textColor="#494387"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/Mistakescommitted"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
-                android:text="0" />
+                android:padding="7dp"
+                android:text="0"
+                android:textColor="#494387"
+                android:textSize="19sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -81,8 +99,7 @@
                 android:onClick="displayMistakescommittedd"
                 android:text="Mistakes committed"
                 android:textColor="#494387"
-                android:textSize="15sp" />
-
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,17 +110,14 @@
             tools:context=".MainActivity">
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="7dp"
                 android:text="Real Madrid"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-
-                />
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Goalright"
@@ -111,41 +125,61 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="7dp"
-                android:text="0" />
+                android:textColor="#494387"
+                android:textSize="19sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:onClick="displayGoalright"
+                android:onClick="displayGoal"
                 android:text="Goal"
                 android:textColor="#494387"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/foulsright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="7dp"
+                android:textColor="#494387"
+                android:textSize="19sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="displayfouright"
+                android:text="fouls "
+                android:textColor="#494387"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/offsaidright"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
-                android:text="0" />
+                android:padding="7dp"
+                android:text="0"
+                android:textColor="#494387"
+                android:textSize="19sp" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:id="@+id/button"
+                style="@style/football"
                 android:onClick="offsaidright"
-                android:text="offside"
-                android:textColor="#494387"
-                android:textSize="15sp" />
+                android:text="offside" />
 
             <TextView
                 android:id="@+id/Mistakescommittedright"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
-                android:text="0" />
+                android:padding="7dp"
+                android:text="0"
+                android:textColor="#494387"
+                android:textSize="19sp" />
 
             <Button
                 android:layout_width="match_parent"
@@ -154,10 +188,8 @@
                 android:onClick="displayMistakescommittedright"
                 android:text="Mistakes committed"
                 android:textColor="#494387"
-                android:textSize="15sp" />
-
+                android:textSize="20sp" />
         </LinearLayout>
-
     </LinearLayout>
 
     <Button
@@ -165,8 +197,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="RESTART"
-        android:textStyle="bold"
         android:onClick="RESTART"
-        />
+        android:text="RESTART"
+        android:textStyle="bold" />
 </RelativeLayout>
