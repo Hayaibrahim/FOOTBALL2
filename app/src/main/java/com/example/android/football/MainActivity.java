@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     //increase by one point
     public void displayGoal(View v) {
-        goal = goal + 1;
+        goal++;
         displayGoal(goal);
     }
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     //increase by one point
     public void displayfou(View v) {
-        fouls = fouls + 1;
+        fouls++;
         displayGoal(fouls);
     }
 
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     //increase by one point
     public void displayMistakescommittedd(View v) {
-        mis = mis + 1;
+        mis++;
         displayMistakescommitted(mis);
     }
 
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     //all booton left
     //increase by one point
     public void displayGoalright(View v) {
-        plus = plus + 1;
+        plus++;
         displayGoalright(plus);
     }
 
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     //increase by one point
     public void displayfouright(View v) {
-        foulsright = foulsright + 1;
+        foulsright++;
         displayGoal(foulsright);
     }
 
